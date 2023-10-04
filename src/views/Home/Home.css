@@ -1,11 +1,5 @@
-.news-articles-img{
-    height: 200px ;
-}
-.news-article-card{
-    margin-bottom: 20px;
-    width: 400px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    padding: 10px;
+.news-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }

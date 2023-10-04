@@ -17,6 +17,7 @@ function Home() {
   return (
     <>
     <h2 className='text-center'>News App...📰</h2>
+    <div className='news-container'>
     {
         news.map((newsArticles, index)=>{
             const {author, title , description, url, urlToImage, publishedAt, content} = newsArticles 
@@ -25,6 +26,7 @@ function Home() {
         )
         })
     }
+    </div>
     </>
   )
 }
