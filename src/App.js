@@ -1,11 +1,14 @@
 import './App.css';
+import Home from './views/Home/Home';
 
 function App() {
   return (
     <>
-    <h1>News App</h1>
+    <Home/>
     </>
   );
 }
+
+
 
 export default App;
