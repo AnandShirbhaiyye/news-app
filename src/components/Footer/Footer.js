@@ -1,11 +1,15 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import './Footer.css';
+import {Link} from 'react-router-dom'
 
-export default function Footer() {
+function Footer() {
   return (
     <>
-    <div>Footer</div>
-    <Link to={`./../`}>Link</Link>
+     <div className="footer-news text-center mt-3">
+        <h5>Created By Anand | <Link to=''>Source Code</Link></h5>
+      </div>
     </>
   )
 }
+
+export default Footer

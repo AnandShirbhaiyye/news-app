@@ -1,5 +1,6 @@
 import React from 'react';
 import './NewsArticle.css';
+import Footer from '../Footer/Footer';
 
 function NewsArticle({author, title , description, url, urlToImage, publishedAt}) {
   return (
