@@ -1,14 +1,11 @@
-import React from 'react';
-import showToast from 'crunchy-toast';
+import React from "react";
 
-
-export default function Navbar() {
-    function Hello(){
-        showToast('This is a sample toast message', 'success', 3000);
-    }
+function Navbar() {
   return (
-   <>
-   <button onClick={Hello}>Hello</button>
-   </>
-  )
+    <>
+     
+    </>
+  );
 }
+
+export default Navbar;

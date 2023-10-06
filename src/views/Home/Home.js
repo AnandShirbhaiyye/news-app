@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import {Link} from 'react-router-dom'
 import "./Home.css";
 import NewsArticle from "../../components/NewsArticle/NewsArticle";
 
@@ -11,7 +12,7 @@ function Home() {
   const loadNews = async () => {
     try {
       const response = await axios.get(
-        `https://newsapi.org/v2/everything?q=${searchQuery}&from=2023-09-06&sortBy=publishedAt&apiKey=${process.env.REACT_APP_API_KEY}`
+        `https://newsapi.org/v2/everything?q=${searchQuery}&from=2023-09-06&sortBy=publishedAt&apiKey=$d17b81c0712d431688c1cdfe245707bc`
       );
       setNews(response.data.articles);
     } catch (error) {
@@ -28,19 +29,23 @@ function Home() {
   }, [searchQuery]);
   return (
     <>
-       <div className="app-title-container">
-        <h1 className="app-title text-center">News App🗞️</h1>
-      </div>
-      <input
-        type="text"
-        className="search-input"
-        value={searchQuery}
-        onChange={(e) => {
-          setSearchQuery(e.target.value);
-        }}
-      />
+      <nav class="navbar navbar-dark bg-dark text-light">
+        <h3 class="navbar-brand ms-3">News App🗞️</h3>
+        <form class="form-inline">
+          <input
+            class="form-control mr-sm-2 me-5"
+            type="search"
+            placeholder="Search"
+            value={searchQuery}
+            onChange={(e) => {
+              setSearchQuery(e.target.value);
+            }}
+            aria-label="Search"
+          />
+        </form>
+      </nav>
 
-      <div className="news-container">
+      <div className="news-container mt-3">
         {news.map((newsArticles, index) => {
           const {
             author,
@@ -64,7 +69,6 @@ function Home() {
           );
         })}
       </div>
-    
     </>
   );
 }
