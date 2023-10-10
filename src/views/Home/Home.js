@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import {Link} from 'react-router-dom'
 import "./Home.css";
 import NewsArticle from "../../components/NewsArticle/NewsArticle";
 
@@ -12,7 +11,7 @@ function Home() {
   const loadNews = async () => {
     try {
       const response = await axios.get(
-        `https://newsapi.org/v2/everything?q=${searchQuery}&from=2023-09-06&sortBy=publishedAt&apiKey=$d17b81c0712d431688c1cdfe245707bc`
+        `https://newsapi.org/v2/everything?q=${searchQuery}&from=2023-09-10&sortBy=publishedAt&apiKey=${process.env.REACT_APP_API_KEY}`
       );
       setNews(response.data.articles);
     } catch (error) {
