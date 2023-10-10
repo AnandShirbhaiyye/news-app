@@ -2,6 +2,6 @@
 
 ### Stay informed with our news app! Get the latest headlines, breaking news, and in-depth articles from trusted sources. Customize your feed, receive notifications, and stay connected to the world's events, all in one convenient app.
 
-![Live Preview](./screenshot/)
+![Live Preview](./screenshot/newsapp.png)
 
-🎯[Click here to see live website](https://)
+🎯[Click here to see live website](https://news-app-news.netlify.app/)
